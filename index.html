@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional CV / Resume Template">
+    <title>CV — Alex Morgan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><i
+            class="fa-solid fa-moon"></i></button>
+    <button id="print-btn" class="print-btn" aria-label="Print CV"><i class="fa-solid fa-download"></i></button>
+
+    <div class="cv-container" id="cv-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-photo-wrapper">
+                <div class="profile-photo">
+                    <div class="photo-placeholder"><i class="fa-solid fa-user"></i></div>
+                </div>
+                <div class="status-dot"></div>
+            </div>
+            <div class="sidebar-header">
+                <h1 class="name">Dinesh Bhandari</h1>
+                <p class="title">Undergraduate Student</p>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-heading"><i class="fa-solid fa-address-card"></i> Contact</h2>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-envelope"></i><span>bhandaridinesh2020@gmail.com</span></li>
+                    <li><i class="fa-solid fa-phone"></i><span>+9779860248197</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Kawasoti-5, Nawalpur</span></li>
+                    <li><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/dineshbhandari</span></li>
+                    <li><i class="fa-brands fa-github"></i><span>github.com/dinesh24</span></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-heading"><i class="fa-solid fa-wand-magic-sparkles"></i> Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Gis And Remote Sensing</span><span>85%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python</span><span>70%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML / CSS</span><span>65%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>React</span><span>75%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>User Research</span><span>92%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-heading"><i class="fa-solid fa-language"></i> Languages</h2>
+                <div class="languages-container">
+                    <div class="language-item"><span class="lang-name">Nepal</span>
+                        <div class="lang-dots"><span class="dot filled"></span><span class="dot filled"></span><span
+                                class="dot filled"></span><span class="dot filled"></span><span
+                                class="dot filled"></span></div>
+                    </div>
+                    <div class="language-item"><span class="lang-name">English</span>
+                        <div class="lang-dots"><span class="dot filled"></span><span class="dot filled"></span><span
+                                class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-heading"><i class="fa-solid fa-heart"></i> Interests</h2>
+                <div class="interests-container">
+                    <span class="interest-tag"><i class="fa-solid fa-camera"></i> Photography</span>
+                    <span class="interest-tag"><i class="fa-solid fa-mountain-sun"></i> Hiking</span>
+                    <span class="interest-tag"><i class="fa-solid fa-book"></i> Reading</span>
+                    <span class="interest-tag"><i class="fa-solid fa-palette"></i> Painting</span>
+                    <span class="interest-tag"><i class="fa-solid fa-music"></i> Music</span>
+                    <span class="interest-tag"><i class="fa-solid fa-code"></i> Open Source</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <section class="section" id="about-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-user-pen"></i></span> Profile
+                </h2>
+                <p class="about-text">Passionate and driven <strong>Geospatial Enthusiast</strong> with a deep interest
+                    in
+                    <strong>GIS</strong>, <strong>Remote Sensing</strong>, <strong>Machine Learning</strong>, and
+                    <strong>Deep Learning</strong> for spatial analysis. Skilled in building interactive
+                    <strong>web mapping</strong> applications and leveraging geospatial data to solve real-world
+                    problems. Experienced in satellite image processing, spatial data visualization, and developing
+                    intelligent models for land use classification, change detection, and environmental monitoring.
+                    Eager to bridge the gap between geospatial science and modern AI technologies.
+                </p>
+            </section>
+
+            <section class="section" id="experience-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-briefcase"></i></span>
+                    Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">GIS Intern</h3>
+                                    <p class="timeline-company"><i class="fa-solid fa-building"></i> Survey Department,
+                                        Nepal</p>
+                                </div><span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2025 —
+                                    Present</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Assisted in digitizing topographic maps using ArcGIS and QGIS</li>
+                                <li>Processed satellite imagery for land use / land cover classification</li>
+                                <li>Created interactive web maps using Leaflet.js and GeoServer</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>ArcGIS</span><span>QGIS</span><span>Leaflet.js</span><span>GeoServer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Research Assistant — Remote Sensing Lab</h3>
+                                    <p class="timeline-company"><i class="fa-solid fa-university"></i> University
+                                        Department</p>
+                                </div><span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024 —
+                                    2025</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Applied deep learning (CNN) for satellite image classification using Python</li>
+                                <li>Performed change detection analysis on multi-temporal Landsat data</li>
+                                <li>Co-authored a research paper on ML-based flood mapping</li>
+                            </ul>
+                            <div class="timeline-tags"><span>Python</span><span>TensorFlow</span><span>Google Earth
+                                    Engine</span><span>Remote Sensing</span></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Freelance Web Mapping Developer</h3>
+                                    <p class="timeline-company"><i class="fa-solid fa-laptop-code"></i> Self-employed
+                                    </p>
+                                </div><span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2023 —
+                                    2024</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Built interactive web GIS dashboards for local NGOs and municipalities</li>
+                                <li>Developed geospatial data pipelines using Python, GeoPandas, and PostGIS</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Leaflet</span><span>PostGIS</span><span>GeoPandas</span><span>HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="education-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">B.E. in Geomatics Engineering</h3>
+                                    <p class="timeline-company"><i class="fa-solid fa-university"></i> Kathmandu
+                                        university</p>
+                                </div><span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2022 —
+                                    2026</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Coursework: GIS, Remote Sensing, Photogrammetry, Geodesy, Web GIS, Surveying</li>
+                                <li>7th Semester — Specializing in Web Mapping & Geospatial AI</li>
+                                <li>Academic projects in LULC classification, flood mapping, and spatial data analysis
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="certifications-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-certificate"></i></span>
+                    Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-map"></i></div>
+                        <div class="cert-info">
+                            <h3>Cartography & Visualization</h3>
+                            <p>Esri Website</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div class="cert-info">
+                            <h3>ArcGIS Professional Certificate</h3>
+                            <p>Esri Website</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="cert-info">
+                            <h3>QGIS for Advanced Analysis</h3>
+                            <p>Coursera</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="cert-info">
+                            <h3>Geospatial Machine Learning</h3>
+                            <p>Kaggle</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="projects-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-rocket"></i></span> Key
+                    Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-number">01</div>
+                        <h3>Rooftop Analysis — Kathmandu Valley</h3>
+                        <p>Extracted and classified rooftops from high-resolution satellite imagery using deep learning
+                            (U-Net) for solar energy potential assessment across Kathmandu Valley.</p>
+                        <div class="project-tags"><span>Deep Learning</span><span>U-Net</span><span>Remote
+                                Sensing</span></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-number">02</div>
+                        <h3>Flood Risk Web Map — Nepal</h3>
+                        <p>Built an interactive Leaflet-based web map visualizing flood-prone zones in Terai region
+                            using multi-criteria GIS analysis and real-time river data.</p>
+                        <div class="project-tags"><span>Leaflet.js</span><span>GeoServer</span><span>Web GIS</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-number">03</div>
+                        <h3>LULC Change Detection</h3>
+                        <p>Analyzed 20-year land use / land cover changes in Nawalpur district using Landsat time-series
+                            data and Random Forest classification in Google Earth Engine.</p>
+                        <div class="project-tags"><span>GEE</span><span>Python</span><span>ML Classification</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="references-section">
+                <h2 class="section-title"><span class="section-icon"><i class="fa-solid fa-quote-left"></i></span>
+                    References</h2>
+                <p class="references-note">Available upon request.</p>
+            </section>
+        </main>
+    </div>
+
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top"><i
+            class="fa-solid fa-chevron-up"></i></button>
+    <script src="script.js"></script>
+</body>
+
+</html>
