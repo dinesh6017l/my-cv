@@ -299,6 +299,7 @@ body {
 }
 .timeline-item { position: relative; }
 .timeline-dot {
+
     position: absolute;
     left: -28px;
     top: 6px;
