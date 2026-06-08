@@ -1,0 +1,17 @@
+[Server]
+HttpPort = 9000
+# Set to your Render URL after deployment, e.g. https://gis-featureserv.onrender.com
+UrlBase = ""
+# Allow all origins (lock down to your CV site URL in production)
+CORSOrigins = ["*"]
+
+[Database]
+# Connection is set via DATABASE_URL environment variable — do not hardcode here
+
+[Paging]
+LimitDefault = 100
+LimitMax = 10000
+
+[Metadata]
+Title = "Dinesh Bhandari — GIS Feature Service"
+Description = "PostGIS spatial layers served as OGC API Features"
