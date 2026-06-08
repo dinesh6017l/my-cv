@@ -26,9 +26,21 @@
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
             <div class="profile-photo-wrapper">
-                <div class="profile-photo">
-                    <div class="photo-placeholder"><i class="fa-solid fa-user"></i></div>
+                <div class="profile-photo" id="profile-photo-btn" style="cursor: pointer;" title="Profile Menu">
+                    <div class="photo-placeholder" id="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                    <img id="profile-img-display" src="" alt="Profile Picture" class="profile-img" style="display: none;">
                 </div>
+                <div class="profile-upload-badge" id="profile-upload-badge-btn" title="Profile Menu">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                
+                <!-- Profile Action Dropdown -->
+                <div class="profile-menu" id="profile-menu">
+                    <button id="profile-action-change"><i class="fa-solid fa-image"></i> Change Photo</button>
+                    <button id="profile-action-remove" class="remove-btn"><i class="fa-solid fa-trash-can"></i> Remove Photo</button>
+                </div>
+
+                <input type="file" id="profile-file-input" accept="image/*" style="display: none;">
                 <div class="status-dot"></div>
             </div>
             <div class="sidebar-header">
@@ -41,7 +53,7 @@
                     <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:bhandaridinesh2020@gmail.com" style="color: inherit; text-decoration: none;">bhandaridinesh2020@gmail.com</a></span></li>
                     <li><i class="fa-solid fa-phone"></i><span><a href="tel:+9779860248197" style="color: inherit; text-decoration: none;">+9779860248197</a></span></li>
                     <li><i class="fa-solid fa-location-dot"></i><span>Kawasoti-5, Nawalpur</span></li>
-                    <li><i class="fa-brands fa-linkedin"></i><span><a href="https://linkedin.com/in/dineshbhandari" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">linkedin.com/in/dineshbhandari</a></span></li>
+                    <li><i class="fa-brands fa-linkedin"></i><span><a href="https://np.linkedin.com/in/dinesh-bhandari-5651b4218" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">linkedin.com/in/dinesh-bhandari-5651b4218</a></span></li>
                     <li><i class="fa-brands fa-github"></i><span><a href="https://github.com/dinesh6017l" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">github.com/dinesh6017l</a></span></li>
                 </ul>
             </div>
@@ -296,11 +308,11 @@
                             <p>+977 9860248197</p>
                         </div>
                     </a>
-                    <a href="https://linkedin.com/in/dineshbhandari" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <a href="https://np.linkedin.com/in/dinesh-bhandari-5651b4218" target="_blank" rel="noopener noreferrer" class="contact-card">
                         <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
                         <div class="contact-card-info">
                             <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/dineshbhandari</p>
+                            <p>dinesh-bhandari-5651b4218</p>
                         </div>
                     </a>
                     <a href="https://github.com/dinesh6017l" target="_blank" rel="noopener noreferrer" class="contact-card">

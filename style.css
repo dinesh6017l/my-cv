@@ -102,16 +102,104 @@ body {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    padding: 4px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: pulseGlow 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+.profile-upload-badge {
+    position: absolute;
+    bottom: 2px;
+    right: calc(50% - 62px);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition);
+    z-index: 10;
+}
+.profile-upload-badge:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.profile-menu {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 6px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 100;
+    width: 140px;
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.profile-menu.show {
+    display: flex;
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+.profile-menu button {
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background var(--transition);
+    width: 100%;
+}
+.profile-menu button:hover {
+    background: var(--bg-primary);
+}
+.profile-menu button.remove-btn {
+    color: #ef4444;
+}
+.profile-menu button.remove-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
 }
 @keyframes pulseGlow {
     0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
-    50%      { box-shadow: 0 0 30px 10px var(--accent-glow); }
+    50%      { box-shadow: 0 0 20px 5px var(--accent-glow); }
+}
+.profile-img {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+    border: 3px solid var(--bg-sidebar);
 }
 .photo-placeholder {
     width: 100%;
@@ -124,6 +212,7 @@ body {
     font-size: 3rem;
     color: rgba(255,255,255,0.5);
     backdrop-filter: blur(10px);
+    border: 3px solid var(--bg-sidebar);
 }
 .status-dot {
     position: absolute;
@@ -999,3 +1088,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* ======== INTERSECTION OBSERVER ANIMATIONS ======== */
 .section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .section.visible { opacity: 1; transform: translateY(0); }
+
+/* Disable focus outline/bounding box on Leaflet vector features when clicked */
+.leaflet-interactive:focus {
+    outline: none !important;
+}
+

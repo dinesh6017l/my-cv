@@ -5,6 +5,82 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ——————————————————————————————————
+    // 0. Profile Picture Uploader (Facebook-style)
+    // ——————————————————————————————————
+    const profilePhotoBtn = document.getElementById('profile-photo-btn');
+    const profileFileInput = document.getElementById('profile-file-input');
+    const profilePlaceholder = document.getElementById('profile-placeholder');
+    const profileImgDisplay = document.getElementById('profile-img-display');
+
+    const savedProfileImg = localStorage.getItem('cv-profile-img');
+    if (savedProfileImg) {
+        profileImgDisplay.src = savedProfileImg;
+        profileImgDisplay.style.display = 'block';
+        profilePlaceholder.style.display = 'none';
+    }
+
+    const profileUploadBadgeBtn = document.getElementById('profile-upload-badge-btn');
+    const profileMenu = document.getElementById('profile-menu');
+    const profileActionChange = document.getElementById('profile-action-change');
+    const profileActionRemove = document.getElementById('profile-action-remove');
+
+    // Helper to toggle menu visibility
+    if (profilePhotoBtn && profileMenu) {
+        const toggleMenu = (e) => {
+            e.stopPropagation();
+            profileMenu.classList.toggle('show');
+        };
+        profilePhotoBtn.addEventListener('click', toggleMenu);
+        if (profileUploadBadgeBtn) {
+            profileUploadBadgeBtn.addEventListener('click', toggleMenu);
+        }
+
+        // Close menu on clicking outside
+        document.addEventListener('click', () => {
+            profileMenu.classList.remove('show');
+        });
+    }
+
+    if (profileActionChange && profileFileInput) {
+        profileActionChange.addEventListener('click', () => {
+            profileFileInput.click();
+            profileMenu.classList.remove('show');
+        });
+    }
+
+    if (profileActionRemove) {
+        profileActionRemove.addEventListener('click', () => {
+            localStorage.removeItem('cv-profile-img');
+            profileImgDisplay.src = '';
+            profileImgDisplay.style.display = 'none';
+            profilePlaceholder.style.display = 'flex';
+            profileMenu.classList.remove('show');
+            if (profileFileInput) profileFileInput.value = '';
+        });
+    }
+
+    if (profileFileInput) {
+        profileFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const base64Data = event.target.result;
+                    profileImgDisplay.src = base64Data;
+                    profileImgDisplay.style.display = 'block';
+                    profilePlaceholder.style.display = 'none';
+                    try {
+                        localStorage.setItem('cv-profile-img', base64Data);
+                    } catch (err) {
+                        console.warn('Could not save image to localStorage: size limit exceeded.', err);
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // ——————————————————————————————————
     // 1. Dark / Light Theme Toggle
     // ——————————————————————————————————
     const themeBtn = document.getElementById('theme-toggle');
@@ -532,10 +608,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             tooltipHTML += `<tr style="border-bottom: 1px dotted var(--border);"><td style="padding: 2px 4px; font-weight: 600; color: var(--text-primary);">${key}</td><td style="padding: 2px 4px; color: var(--text-secondary); word-break: break-all;">${displayedVal}</td></tr>`;
                         }
                         tooltipHTML += '</table></div>';
-                        layer.bindTooltip(tooltipHTML, { sticky: true, opacity: 0.95 });
                         
-                        // Fallback click popup
+                        // Bind tooltip for hover and popup for click
+                        layer.bindTooltip(tooltipHTML, { sticky: true, opacity: 0.95 });
                         layer.bindPopup(tooltipHTML);
+
+                        // Prevent tooltip from showing when popup is active
+                        layer.on({
+                            popupopen: function () {
+                                layer.unbindTooltip();
+                            },
+                            popupclose: function () {
+                                layer.bindTooltip(tooltipHTML, { sticky: true, opacity: 0.95 });
+                            }
+                        });
                     }
 
                     // Mouse interactions
