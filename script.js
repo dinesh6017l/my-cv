@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Base URL for local pg_featureserv
-        const baseUrl = 'http://localhost:9000';
+        const baseUrl = 'https://my-cv-de0m.onrender.com';
 
         // Choropleth Helpers
         function getChoroplethColor(d) {
